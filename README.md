@@ -57,24 +57,29 @@ props
 default value
 
 ```js
-;(imgs = []),
-  (imgRatio = '1/1'),
-  (imgWidth = '90%'),
-  (imgObjectFit = 'contain'),
-  (imgBorder = ''),
-  (imgRadius = ''),
-  (isDot = true),
-  (dotColor = 'black'),
-  (dotColorSelected = '#ff8e0d'),
-  (dotSize = '1.5rem'),
-  (gap = '0.5rem'),
-  (isArrow = true),
-  (arrowColor = '#ff8e0d'),
-  (arrowDisabledColor = 'grey'),
-  (arrowSize = '1.5rem'),
+function Carousel({
+  imgs = [],
+  imgRatio = '1/1',
+  imgWidth = '90%',
+  imgObjectFit = 'contain',
+  imgBorder = '',
+  imgRadius = '',
+  isDot = true,
+  dotColor = 'black',
+  dotColorSelected = '#ff8e0d',
+  dotSize = '1.5rem',
+  gap = '0.5rem',
+  isArrow = true,
+  arrowColor = '#ff8e0d',
+  arrowDisabledColor = 'grey',
+  arrowSize = '1.5rem',
   descriptions,
-  (descriptionSize = '1.5rem'),
-  (descriptionColor = '#ff8e0d')
+  descriptionSize = '1.5rem',
+  descriptionColor = '#ff8e0d'
+}) {
+  // logics
+  return 'Carousel Component'
+}
 ```
 
 ## License
