@@ -3,8 +3,10 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 
-function Carosel(_ref) {
-  var _ref$imgs = _ref.imgs,
+function Carousel(_ref) {
+  var _ref$width = _ref.width,
+    width = _ref$width === void 0 ? '100%' : _ref$width,
+    _ref$imgs = _ref.imgs,
     imgs = _ref$imgs === void 0 ? [] : _ref$imgs,
     _ref$imgRatio = _ref.imgRatio,
     imgRatio = _ref$imgRatio === void 0 ? '1/1' : _ref$imgRatio,
@@ -95,26 +97,26 @@ function Carosel(_ref) {
   var onRightClick = function onRightClick() {
     if (idx < imgs.length - 1) {
       containerRef.current.style.transition = 'transform 0.5s';
-      var width = containerRef.current.offsetWidth;
+      var _width = containerRef.current.offsetWidth;
       var newIdx = idx + 1;
-      containerRef.current.style.transform = "translate(" + -newIdx * width + "px)";
-      containerRef.current.moved = -newIdx * width;
+      containerRef.current.style.transform = "translate(" + -newIdx * _width + "px)";
+      containerRef.current.moved = -newIdx * _width;
       setIdx(newIdx);
     }
   };
   var onLeftClick = function onLeftClick() {
     if (idx > 0) {
       containerRef.current.style.transition = 'transform 0.5s';
-      var width = containerRef.current.offsetWidth;
+      var _width2 = containerRef.current.offsetWidth;
       var newIdx = idx - 1;
-      containerRef.current.style.transform = "translate(" + -newIdx * width + "px)";
-      containerRef.current.moved = -newIdx * width;
+      containerRef.current.style.transform = "translate(" + -newIdx * _width2 + "px)";
+      containerRef.current.moved = -newIdx * _width2;
       setIdx(newIdx);
     }
   };
   return /*#__PURE__*/React__default.createElement("div", {
     style: {
-      width: '100%',
+      width: width,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -225,5 +227,5 @@ function Carosel(_ref) {
   }, descriptions[idx]));
 }
 
-module.exports = Carosel;
+module.exports = Carousel;
 //# sourceMappingURL=index.js.map

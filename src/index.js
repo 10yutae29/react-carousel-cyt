@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRef, useState } from 'react'
 /**
- *
+ * @prop {width} Carousel with | string | "100%" or "500px" or "20rem" ...
  * @prop {imgs}  img url array | [string] | ["url","url","url"...]
  * @prop {imgRatio} img aspectRatio | string | "1/2" or "16/9" ...
  * @prop {imgWidth} img width | string | "24px" or "50%" or "12rem" ...
@@ -22,7 +22,8 @@ import { useRef, useState } from 'react'
  * @prop {descriptionColor} descriptions color | string | "red" or #ff8e0d...
  * @returns
  */
-export default function Carosel({
+export default function Carousel({
+  width = '100%',
   imgs = [],
   imgRatio = '1/1',
   imgWidth = '90%',
@@ -126,7 +127,7 @@ export default function Carosel({
   return (
     <div
       style={{
-        width: '100%',
+        width: width,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

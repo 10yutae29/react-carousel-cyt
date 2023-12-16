@@ -19,13 +19,12 @@ import Carosel from 'react-carousel-cyt'
 const App = () => {
   return (
     <div style={{ width: '100vw' }}>
-      <div style={{ width: '80%' }}>
-        <Carosel
-          // imgs attribute is essential
-          imgs={['favicon.ico', 'favicon.ico', 'favicon.ico', 'favicon.ico']}
-          imgRatio={'2/1'}
-        />
-      </div>
+      <Carousel
+        // imgs attribute is essential
+        imgs={['favicon.ico', 'favicon.ico', 'favicon.ico', 'favicon.ico']}
+        imgRatio='2/1'
+        width='90%'
+      />
     </div>
   )
 }
@@ -35,6 +34,7 @@ props
 
 ```jsx
 /**
+ * @prop {width} Carousel with | string | "100%" or "500px" or "20rem" ...
  * @prop {imgs}  img url array | [string] | ["url","url","url"...]
  * @prop {imgRatio} img aspectRatio | string | "1/2" or "16/9" ...
  * @prop {imgWidth} img width | string | "24px" or "50%" or "12rem" ...

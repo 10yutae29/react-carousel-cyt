@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-function Carosel({
+function Carousel({
+  width = '100%',
   imgs = [],
   imgRatio = '1/1',
   imgWidth = '90%',
@@ -91,7 +92,7 @@ function Carosel({
   };
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      width: '100%',
+      width: width,
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -192,5 +193,5 @@ function Carosel({
   }, descriptions[idx]));
 }
 
-export default Carosel;
+export default Carousel;
 //# sourceMappingURL=index.modern.js.map
